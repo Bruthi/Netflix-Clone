@@ -1,0 +1,111 @@
+:root{ /*Variaveis dentro do css*/
+    --vermelho:#E50914; 
+    --preto:#141414;
+}
+
+*{ /*Se refere a todo o documento*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Para todos os conteudos se forçarem a ficar do tamanho que eu definir as caixas do site(divs)*/
+}
+
+/*Elementos base*/
+
+body{
+    background: var(--preto);
+    font-family: 'Arial', Times, serif;
+    color: white; /*Muda a cor base de todos os elementos do body, exeto os com cores ja definidas*/
+}
+
+header .container{
+   display: flex; /*Deixa as coisas em formato de linha*/
+   flex-direction: row; /*Semantica de display:flex ;(Tem a mesma funcionalidade)*/
+   align-items: center;
+   justify-content: space-between; /*Cria um espaço entre a primeira tag filha do container e a segunda (so para linhas horizontais*/
+}
+
+header .logo{
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+header nav a{
+    text-decoration: none; /*Remove as linhas em baixo dos links*/
+    color: #AAA;
+    margin-right: 10px; 
+}
+
+header nav a:hover{ /*Muda a cor quando o mouse passa em cima*/
+    color: #fff;
+}
+
+/*Filme Principal*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url(/Netflix/img/capa-theboys.jpg);
+    /*Faz um degrade de cores */ /*Precisa ter 2 RGBs*/ /*Posso usar rgb(24, 21, 23) ao invés de 100% para um efeito mais forte*/
+
+    height: 400px;
+    background-size:cover;/*Especifica o tamanho da imagem do backgroude | Deixa a imagem do tamanho da caixa*/
+
+    display: flex; /*Formato de linha*/
+    flex-direction: column; /*Muda o formato dos elementos para coluna*/
+    justify-content: center; /*Joga os elementos para o centro da caixa(So para colunas)*/
+    align-items: flex-start; /*Faz os elementos começarem da esquerda*/
+}
+
+.titulo{
+    margin-top: 5%; /*Usar porcentagem ajuda na configuração de aparelhos tabblet */
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer; /*Transforma o cursor*/
+    transition: .3s ease all; /*Suaviza a troca de cor dos botões(HOVER)*/
+}
+
+
+.botao:hover {
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 5px;
+}
+
+.container{ /*Muda tudo que esta dentro dos containers*/
+    margin-left: 20px;
+}
+
+.filme-principal .container{ /*Muda somente o container do filme-principal*/
+    width: 70%;
+}
+
+.box-filmes{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
